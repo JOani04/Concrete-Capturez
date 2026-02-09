@@ -1,0 +1,107 @@
+/*
+  Jeremy Oani
+  2026-02-08
+  CS 125H - Lab 3, v1
+
+  Color palette:
+  Primary text: #111827
+  Accent:       #e85d04
+  Accent 2:     #1b4965
+  Background:   #f6f7f8
+  Borders:      #d1d5db
+  Visited link: #5a189a
+*/
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  background: #f6f7f8;
+  color: #111827;
+}
+
+/* anchor pseudo-classes (right under body, correct order) */
+a:link { color: #1b4965; }
+a:visited { color: #5a189a; }
+a:focus { outline: 3px solid #e85d04; outline-offset: 2px; }
+a:hover { color: #e85d04; text-decoration: underline; }
+a:active { color: #111827; }
+
+/* plain element selector right after anchor rules */
+p {
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+header, main, footer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+header {
+  border-bottom: 1px solid #d1d5db;
+}
+
+header h1 {
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  color: #1b4965;
+  text-align: center;
+  margin-top: 0;
+}
+
+/* nested descendant selector */
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+header nav a {
+  text-decoration: none;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+section {
+  padding: 16px 0;
+  border-bottom: 1px solid #eee;
+}
+
+article, aside {
+  padding: 12px;
+  border: 1px solid #eee;
+  margin-top: 12px;
+}
+
+/* pseudo-element selector */
+main p::first-letter {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #e85d04;
+}
+
+/* id selector (unique) */
+#featured {
+  border-left: 6px solid #e85d04;
+  padding-left: 12px;
+}
+
+/* class selector (group of disparate elements) */
+.panel {
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+}
+
+footer {
+  border-top: 1px solid #d1d5db;
+  text-align: center;
+}
